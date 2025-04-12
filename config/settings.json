@@ -1,0 +1,23 @@
+{
+    "tradu\u00e7\u00e3o_automatica": true,
+    "translation_enabled": true,
+    "api_key": "4aac2bdb-1e65-4a35-9964-8c014b642341:fx",
+    "theme": "Escuro",
+    "widget_positions": {
+        "original_text_frame": {
+            "x": 340,
+            "y": 20
+        },
+        "text_blocks_group": {
+            "x": 20,
+            "y": 20
+        },
+        "editable_text_frame": {
+            "x": 340,
+            "y": 180
+        }
+    },
+    "language": "pt_BR",
+    "translation_target_lang": "pt",
+    "chatgpt_api_key": ""
+}
