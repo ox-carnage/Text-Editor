@@ -318,6 +318,7 @@ def translate_with_chatgpt(text, api_key, target_lang="pt"):
     """Translate using ChatGPT API"""
     try:
         if not api_key:
+            print("ChatGPT: Nenhuma chave API fornecida.")
             return None
         url = "https://api.openai.com/v1/chat/completions"
         headers = {
@@ -331,14 +332,17 @@ def translate_with_chatgpt(text, api_key, target_lang="pt"):
             "max_tokens": 1000
         }
         
+        print("ChatGPT: Enviando requisição para a API...")
         response = requests.post(url, headers=headers, json=data, timeout=10)
         if response.status_code == 200:
+            print("ChatGPT: Tradução bem-sucedida.")
             return response.json()["choices"][0]["message"]["content"].strip()
         else:
-            print(f"ChatGPT error: Status code {response.status_code}")
+            print(f"ChatGPT: Erro na API - Status code: {response.status_code}, Mensagem: {response.text}")
+            return None
     except Exception as e:
-        print(f"ChatGPT error: {str(e)}")
-    return None
+        print(f"ChatGPT: Falha na requisição - Erro: {str(e)}")
+        return None
 
 def translate_with_deepl(text, target_lang="pt"):
     """Translate using DeepL API with fixed key"""
