@@ -14,6 +14,7 @@ Manages the **main GUI window**, handling JSON file loading, text display, editi
 - Automatically detects and saves edited translations.  
 - Offers automatic translation using external services with fallback.  
 - Dynamically updates UI according to user settings (theme, language).
+- Monitoring the percentage of translation completed.
 
 ---
 
